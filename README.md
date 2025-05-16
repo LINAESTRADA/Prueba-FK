@@ -5,8 +5,8 @@ Los eventos pueden ser ingresados manualmente mediante un formulario web o media
 
 Funcionalidades principales
 
-- Registro de eventos a través de una **API REST** (`/api/register`)
-- Registro manual de eventos mediante **formulario web** (`/form/register`)
+- Registro de eventos a través de una **API REST** (/api/register)
+- Registro manual de eventos mediante **formulario web** (/form/register)
 - Consulta de eventos con filtros por **tipo de evento** y **rango de fechas**
 - Registro de errores mediante archivos de **logging**
 - Base de datos desacoplada usando **SQLAlchemy**
