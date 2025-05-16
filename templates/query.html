@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Consulta de Eventos</title>
+</head>
+
+<body>
+    <h2>Consulta de Eventos</h2>
+    <form method="POST">
+        <label>Tipo de evento:</label>
+        <select name="event_type">
+            <option value="">Todos</option>
+            <option value="api">API</option>
+            <option value="manual">Manual</option>
+        </select><br><br>
+
+        <label>Desde:</label>
+        <input type="date" name="start_date" required><br>
+        <label>Hasta:</label>
+        <input type="date" name="end_date" required><br><br>
+
+        <button type="submit">Consultar</button>
+    </form>
+
+    <hr>
+
+    <h3>Resultados:</h3>
+    <ul>
+        {% for event in events %}
+        <li>{{ event.timestamp }} - {{ event.description }} ({{ event.event_type }})</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/form/register">Registrar nuevo evento</a>
+</body>
+
+</html>
